@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: library-management
+  datasource:
+    url: jdbc:mysql://database-1.cj68musq2y57.ap-south-1.rds.amazonaws.com:3306/library_db
+    username: admin
+    password: admin123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 8081
+
+# JWT Configuration (must match auth service)
+jwt:
+  secret: your-secret-key-change-this-in-production-to-a-strong-random-string
+
+# AWS S3 Configuration
+aws:
+  s3:
+    bucket: lm-webapp
+    region: ap-south-1
