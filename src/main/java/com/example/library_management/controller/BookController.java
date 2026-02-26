@@ -20,14 +20,14 @@ public class BookController {
         return bookService.createBook(request);
     }
 
+    @GetMapping("/cicdTest")
+    public String cicdTest() {
+        return "This is ci/cd testing";
+    }
+
     @GetMapping
     public List<Book> all() {
         return bookService.getAllBooks();
-    }
-
-    @GetMapping("/test/cicd-test")
-    public String cicdTest() {
-        return "CI/CD test successful";
     }
 
     @GetMapping("/{id}")
