@@ -25,6 +25,11 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    @GetMapping("/cicd-test")
+    public String cicdTest() {
+        return "CI/CD test successful";
+    }
+
     @GetMapping("/{id}")
     public Book getById(@PathVariable Long id) {
         return bookService.getBookById(id);
