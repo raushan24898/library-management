@@ -25,7 +25,7 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/cicd-test")
+    @GetMapping("/test/cicd-test")
     public String cicdTest() {
         return "CI/CD test successful";
     }
