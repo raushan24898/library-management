@@ -37,11 +37,6 @@ public class AuthorController {
         return bookService.getBooksByAuthorId(id);
     }
 
-    @GetMapping("/cicd-test")
-    public String cicdTest() {
-        return "CI/CD test successful";
-    }
-
     @GetMapping("/search")
     public List<Author> searchByName(@RequestParam String q) {
         return authorService.findAuthorsByName(q);
